@@ -14,11 +14,12 @@ $(document).ready( () => {
   }
   
   document.getElementById('edit-character-form').onsubmit = function(){
-     charactersAPI.updateOneRegister();    
+    // e.preventDefault(); 
+    charactersAPI.updateOneRegister();    
   }
   
   document.getElementById('new-character-form').onsubmit = function(e){
-      e.preventDefault()
+      e.preventDefault();
       charactersAPI.createOneRegister();
 
   }

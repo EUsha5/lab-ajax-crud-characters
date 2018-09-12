@@ -64,9 +64,19 @@ class APIHandler {
     })
   }
 
-  // updateOneRegister() {
-
-  // }
+  updateOneRegister() {
+    const infoUpdate = {
+      name: document.getElementById('char-name').value,
+      occupation: document.getElementById('char-occ').value,
+      weapon: document.getElementById('char-wep').value
+    };
+    const charId = document.getElementById('char-id').value;
+    axios.put(`https://ih-crud-api.herokuapp.com/characters/${charId}`, infoUpdate)
+    .then((response)=>{
+    })
+    .catch((err)=>{
+    })
+  }
 
   deleteOneRegister() {
     let resultDiv = document.getElementsByClassName('character-info')[0]
